@@ -72,22 +72,21 @@
             pyproject = true;
             src = self;
             build-system = [ py.hatchling ];
-            dependencies =
-              [
-                pyzotero
-                pdf-inspector
-              ]
-              ++ (with py; [
-                python-dotenv
-                markdownify
-                markdown-it-py
-                pydantic
-                requests
-                fastmcp
-                httpx
-                unidecode
-                bibtexparser
-              ]);
+            dependencies = [
+              pyzotero
+              pdf-inspector
+            ]
+            ++ (with py; [
+              python-dotenv
+              markdownify
+              markdown-it-py
+              pydantic
+              requests
+              fastmcp
+              httpx
+              unidecode
+              bibtexparser
+            ]);
             pythonImportsCheck = [ "zotero_mcp" ];
             meta = {
               description = "Zotero MCP server and CLI";
